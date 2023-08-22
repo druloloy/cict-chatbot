@@ -1,0 +1,44 @@
+{
+    "Enrollment": [
+        "How to enroll?",
+        "What is the process for applying to the university"
+    ],
+    "Requirements": [
+        "What are the requirements?",
+        "What are the requirements for enrollment?"
+    ],
+    "Courses": [
+        "What are the courses offered in TCU?"
+    ],
+    "Examination": [
+        "Is there an entrance examination?"
+    ],
+    "Application": [
+        "Who can apply for admission?"
+    ],
+    "Scholarship": [
+        "What are the requirements for TCU-CEAA scholarship?"
+    ],
+    "Address": ["Where can I submit the requirements for TCU-CEAA?",
+        "Where should I pass my requirements for TCU-CEAA"
+    ],
+    "Time": [
+        "What time can I submit my requirements for TCU-CEAA?"
+    ],
+    "Open hours": ["What are the open hours of TCU registrar?"],
+    "Grades": [
+        "Where can I get my Grades?",
+        "Where can I see my Grades"
+    ],
+    "TOR": [
+        "Where can I get my TOR?",
+        "Where can I get my Transcript of Records?"
+    ],
+    "Tuition": [
+        "How much is the tuition fee?",
+        "How much is the tuition fee for TCU?"
+    ],
+    "Slot": [
+        "Is there still a slot to the online admission application?"
+    ]
+}

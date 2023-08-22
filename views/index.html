@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./styles/style.css">
+
+    <!-- custom js -->
+
+    <!-- js plugins -->
+    <script src="https://kit.fontawesome.com/025a8d6676.js" crossorigin="anonymous"></script>
+    <title>Blitzle - CICT Chatbot</title>
+</head>
+<body>
+    <!-- chat window frame -->
+    <section class="window-frame">
+        <!-- chat header frame -->
+        <header class="header-frame">
+            <h2 class="">Blitzle</h2>
+            <span>CICT Chatbot</span>
+            <button class=""><i class="fa-solid fa-xmark"></i></button>
+        </header>
+        <!-- chat main conversation frame -->
+        <section class="conversation-frame">
+            <section class="chat-bubble-container">
+                <!-- <section class="chat-bubble" data-role="bot">
+                    <span role="text" class="chat-bubble-name">Blitzle</span>
+                    <p class="chat-bubble-text">Hello! I am Blitzle, the CICT Chatbot. How may I help you?</p>
+                </section>
+                <section class="chat-bubble" data-role="user">
+                    <span role="text" class="chat-bubble-name">You</span>
+                    <p class="chat-bubble-text">How to enroll?</p>
+                </section> -->
+            </section>
+
+            <!-- suggestion bubbles -->
+            <section class="chat-bubble-suggestions">
+                <!-- <section role="button" class="chat-bubble-suggestion">
+                    <span role="text" class="chat-bubble-suggestion-text">Enrollment</span>
+                </section>
+                <section role="button" class="chat-bubble-suggestion">
+                    <span role="text" class="chat-bubble-suggestion-text">Schedule</span>
+                </section>
+                <section role="button" class="chat-bubble-suggestion">
+                    <span role="text" class="chat-bubble-suggestion-text">Contact</span>
+                </section> -->
+            </section>
+        </section>
+        
+        <!-- chat input frame -->
+        <section class="input-frame">
+            <form class="input-form" autocomplete="off">
+                <input type="text" name="query" placeholder="Type your message here...">
+                <button class="input-button"><i class="fa-solid fa-paper-plane"></i></button>
+            </form>
+        </section>  
+    </section>
+
+    <!-- chatbot button -->
+    <section class="chatbot-button-frame">
+        <img src="./images/chatting.png" alt="chatbot-icon">
+    </section>
+
+
+    <script>
+        // chatbot button
+        const chatbotButton = document.querySelector('.chatbot-button-frame');
+        const chatbotWindow = document.querySelector('.window-frame');
+        const chatbotCloseButton = document.querySelector('.header-frame button');
+
+        chatbotButton.addEventListener('click', () => {
+            chatbotWindow.classList.add('active');
+            // hide button
+            chatbotButton.style.display = 'none';
+        });
+
+        chatbotCloseButton.addEventListener('click', () => {
+            chatbotWindow.classList.remove('active');
+        
+            // show button
+            chatbotButton.style.display = 'block';
+        });
+
+        // pop up message "Hi! I am Blitzle!"
+    </script>
+
+
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            const form = document.querySelector(".input-form");
+            form.addEventListener("submit", submitQuery);
+        
+            // add first message
+            addChatBubble('bot', 'Hello! I am Blitzle, the CICT Chatbot. How may I help you?');
+
+            // add suggestions
+            addSuggestionsBubble([
+                {tag: 'Enrollment', value: 'How can I enroll?'},
+                {tag: 'Schedule', value: 'What is the schedule of enrollment?'},
+                {tag: 'Courses', value: 'What courses are offered?'}
+            ]);
+        });
+    </script>
+
+    <!-- form requests and responses -->
+    <script>
+        async function submitQuery(e){
+            e.preventDefault();
+
+            const queryInput = document.querySelector('.input-form input');
+            const query = queryInput.value;
+
+            if(query === '') return;
+
+            addChatBubble('user', query);
+            queryInput.value = '';
+
+            // ajax request
+            const response = await fetch('/api/v1/chat?q=' + query);
+
+            if (response.status >= 400) {
+                const data = await response.json();
+                const {message} = data;
+
+                addChatBubble('bot', message);
+                return;
+            }
+
+            if(response.status === 200){
+                const data = await response.json();
+                const {message, suggestions} = data;
+
+                addChatBubble('bot', message);
+                addSuggestionsBubble(suggestions);
+            }
+        }
+
+        function addSuggestionsBubble(suggestions){
+            const chatBubbleSuggestions = document.querySelector('.chat-bubble-suggestions');
+            chatBubbleSuggestions.innerHTML = '';
+        
+            suggestions.forEach(suggestion=>{
+                const chatBubbleSuggestion = document.createElement('section');
+                chatBubbleSuggestion.classList.add('chat-bubble-suggestion');
+                chatBubbleSuggestion.setAttribute('role', 'button');
+                chatBubbleSuggestion.setAttribute('data-value', suggestion.value);
+                
+                const chatBubbleSuggestionText = document.createElement('span');
+                chatBubbleSuggestionText.classList.add('chat-bubble-suggestion-text');
+                chatBubbleSuggestionText.setAttribute('role', 'text');
+                chatBubbleSuggestionText.setAttribute('data-value', suggestion.value);
+                chatBubbleSuggestionText.innerText = suggestion.tag;
+
+                chatBubbleSuggestion.appendChild(chatBubbleSuggestionText);
+                chatBubbleSuggestions.appendChild(chatBubbleSuggestion);
+
+                chatBubbleSuggestion.addEventListener('click', (e)=>{
+                    const queryInput = document.querySelector('.input-form input');
+                    queryInput.value = e.target.dataset.value;
+                    document.querySelector('.input-form button').click();
+                });
+
+            });
+        }
+
+        function addChatBubble(role, text){
+            const chatBubbleContainer = document.querySelector('.chat-bubble-container');
+            const chatBubble = document.createElement('section');
+            chatBubble.classList.add('chat-bubble');
+            chatBubble.setAttribute('data-role', role);
+
+            const chatBubbleName = document.createElement('span');
+            chatBubbleName.classList.add('chat-bubble-name');
+            chatBubbleName.setAttribute('role', 'text');
+            chatBubbleName.innerText = role === 'bot' ? 'Blitzle' : 'You';
+
+            const chatBubbleText = document.createElement('p');
+            chatBubbleText.classList.add('chat-bubble-text');
+            chatBubbleText.innerText = text;
+
+            chatBubble.appendChild(chatBubbleName);
+            chatBubble.appendChild(chatBubbleText);
+
+            chatBubbleContainer.appendChild(chatBubble);
+            
+            scrollToBottom();
+        }
+    </script>
+
+
+    <!-- automatic scroll to bottom -->
+    <script>
+        function scrollToBottom(){
+            const chatBubbleContainer = document.querySelector('.conversation-frame');
+            chatBubbleContainer.scrollTop = chatBubbleContainer.scrollHeight;
+        }
+    </script>
+
+</body>
+</html>
