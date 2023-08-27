@@ -25,12 +25,19 @@
         <section class="conversation-frame">
             <section class="chat-bubble-container">
                 <!-- <section class="chat-bubble" data-role="bot">
-                    <span role="text" class="chat-bubble-name">Blitzle</span>
-                    <p class="chat-bubble-text">Hello! I am Blitzle, the CICT Chatbot. How may I help you?</p>
-                </section>
-                <section class="chat-bubble" data-role="user">
-                    <span role="text" class="chat-bubble-name">You</span>
-                    <p class="chat-bubble-text">How to enroll?</p>
+                    <section class="chat-bubble-icon">
+                        <img src="./images/icons8-circled-user-female-skin-type-5-48.png" alt="">
+                    </section>
+                    <section class="chat-content-bubble-text">
+                        <span role="text" class="chat-bubble-name">Blitzle</span>
+                        <p class="chat-bubble-text">Hello! I am Blitzle, the CICT Chatbot. How may I help you?</p>
+                    </section>
+                </section> -->
+                <!-- <section class="chat-bubble" data-role="user">
+                    <section class="chat-content-bubble-text">
+                        <span role="text" class="chat-bubble-name">User</span>
+                        <p class="chat-bubble-text">How to enroll in TCU?</p>
+                    </section>
                 </section> -->
             </section>
 
@@ -94,7 +101,7 @@
             // add first message
             addChatBubble('bot', `Hey! Thanks for visiting. I'm Blitzle, your CICT Buddy. I can send you updates and provide information on basic queries about TCU via chat. How may I help you today?`);
 
-            // add suggestions
+            // // add suggestions
             addSuggestionsBubble([
                 {tag: 'Enrollment', value: 'How can I enroll?'},
                 {tag: 'Schedule', value: 'What is the schedule of enrollment?'},
@@ -165,10 +172,47 @@
         }
 
         function addChatBubble(role, text){
+            // const chatBubbleContainer = document.querySelector('.chat-bubble-container');
+            // const chatBubble = document.createElement('section');
+            // chatBubble.classList.add('chat-bubble');
+            // chatBubble.setAttribute('data-role', role);
+
+            // const chatBubbleName = document.createElement('span');
+            // chatBubbleName.classList.add('chat-bubble-name');
+            // chatBubbleName.setAttribute('role', 'text');
+            // chatBubbleName.innerText = role === 'bot' ? 'Blitzle' : 'You';
+
+            // const chatBubbleText = document.createElement('p');
+            // chatBubbleText.classList.add('chat-bubble-text');
+            // chatBubbleText.innerText = text;
+
+            // chatBubble.appendChild(chatBubbleName);
+            // chatBubble.appendChild(chatBubbleText);
+
+            // chatBubbleContainer.appendChild(chatBubble);
+            
+
             const chatBubbleContainer = document.querySelector('.chat-bubble-container');
             const chatBubble = document.createElement('section');
             chatBubble.classList.add('chat-bubble');
             chatBubble.setAttribute('data-role', role);
+            
+            if(role === 'bot'){
+                const chatBubbleIcon = document.createElement('section');
+                chatBubbleIcon.classList.add('chat-bubble-icon');
+                
+                const chatBubbleIconImage = document.createElement('img');
+
+                chatBubbleIconImage.src = "./images/icons8-circled-user-female-skin-type-5-48.png";
+                chatBubbleIconImage.alt = "blitzle-icon";
+
+                chatBubbleIcon.appendChild(chatBubbleIconImage);
+
+                chatBubble.appendChild(chatBubbleIcon);
+            }
+
+            const chatBubbleContent = document.createElement('section');    
+            chatBubbleContent.classList.add('chat-content-bubble-text');
 
             const chatBubbleName = document.createElement('span');
             chatBubbleName.classList.add('chat-bubble-name');
@@ -179,11 +223,13 @@
             chatBubbleText.classList.add('chat-bubble-text');
             chatBubbleText.innerText = text;
 
-            chatBubble.appendChild(chatBubbleName);
-            chatBubble.appendChild(chatBubbleText);
+            chatBubbleContent.appendChild(chatBubbleName);
+            chatBubbleContent.appendChild(chatBubbleText);
 
-            chatBubbleContainer.appendChild(chatBubble);
-            
+            chatBubble.appendChild(chatBubbleContent);
+
+            chatBubbleContainer.appendChild(chatBubble);            
+
             scrollToBottom();
         }
     </script>

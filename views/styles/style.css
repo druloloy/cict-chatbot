@@ -77,24 +77,39 @@ body{
             gap: 1rem;
 
             .chat-bubble{
-                background-color: var(--color-primary);
-                color: var(--color-secondary);
-                padding: .5rem;
+                display: flex;
+                flex-direction: row;
                 border-radius: 10px;
-                max-width: 70%;
+                max-width: 90%;
                 word-wrap: break-word;
-            }
+                gap: .5rem;
 
-            .chat-bubble-name{
-                font-size: .8rem;
-                font-weight: 500;
-                margin-bottom: .5rem;
+                .chat-content-bubble-text{
+                    padding: .5rem;
+                    border-radius: 5px;
+                    background-color: var(--color-primary);
+                    color: var(--color-secondary);
+                
+                    .chat-bubble-name{
+                    font-size: .8rem;
+                    font-weight: 500;
+                    margin-bottom: .5rem;
+                    }
+                }
             }
 
             [data-role="user"]{
                 align-self: flex-end;
                 background-color: var(--color-accent);
                 color: var(--color-primary);
+                flex-direction: row-reverse;
+
+                .chat-content-bubble-text{
+                    padding: .5rem;
+                    border-radius: 5px;
+                    background-color: var(--color-accent);
+                    color: var(--color-primary);
+                }
             }
         }
 
