@@ -8,7 +8,7 @@ const {initVectra, addItem, query} = require('../utils/vectra');
 const {getOpenAIApiInstance} = require('../utils/openai');
 
 const openaikey = process.env.OPENAI_API_KEY;
-const vectrapath = path.join(__dirname, 'store');
+const vectrapath = path.join(__dirname, '../store');
 
 const openai = getOpenAIApiInstance(openaikey);
 

@@ -1,5 +1,5 @@
 
-Hey! Thanks for visiting. I'm Blitzle, your CICT Buddy. I can send you updates and provide information on basic queries about school via chat. How may I help you today?
+Hey! Thanks for visiting. I'm Blitzle, your CICT Buddy. I can send you updates and provide information on basic queries about TCU via chat. How may I help you today?
 
 ---
 
@@ -53,27 +53,24 @@ Yes, there is an entrance exam for freshmen applicants. The exam is usually held
 Anyone who has graduated from high school, passed the entrance exam, and met the other requirements can apply for admission to TCU.
 
 ---
-
-
-
 The requirements for the TCU-CEAA scholarship are as follows:
 1. Must be a resident of Taguig City.
 2. Must have a grade point average of 85 or higher.
 3. Must be a member of a marginalized sector.
 4. Must submit the required documents to the TCU Registrar.
+---
+
+You can submit your requirements for TCU-CEAA at the 2nd floor of Senator Renato Companero Cayetano Memorial Science and Technology High School. Make sure to stay tuned for announcements regarding the Taguig City Scholarship.
 
 ---
 
+You can submit your TCU-CEAA scholarship requirements from 8:00 am to 4:00 pm
 
-
-You can submit your requirements to the TCU Registrar at the TCU Main Campus. The address is: 12345 Taguig City, Philippines.
-
-You can submit your requirements from 8:00 am to 4:00 pm, Monday to Friday.
+---
 
 The TCU Registrar is open from 8:00 am to 4:00 pm, Monday to Friday.
 
 ---
-
 
 
 You can get your grades from the TCU Registrar. You can either request for a hard copy of your grades or you can view them online.
@@ -82,9 +79,7 @@ You can get your TOR from the TCU Registrar. You can either request for a hard c
 
 ---
 
-
-
-The tuition fee for TCU is free. However, there are other fees that students need to pay, such as the miscellaneous fee, the laboratory fee, and the library fee.
+The tuition fee for Taguig City University is completely free.
 
 ---
 
