@@ -169,11 +169,27 @@ body{
             }
 
             > button{
+                display: block;
                 background-color: transparent;
                 border: none;
                 color: var(--color-primary);
                 font-size: 1.5rem;
                 cursor: pointer;
+            }
+
+            > button.inactive{
+                display: none;
+            }
+
+            
+            > .loading{
+                display: none;
+                width: 50px;
+                aspect-ratio: 1/1;
+            }
+
+            > .loading.active{
+                display: block;
             }
         }
     }
@@ -187,13 +203,14 @@ body{
 
 .chatbot-button-frame{
     position: fixed;
-    bottom: 0;
-    right: 0;
+    bottom: 20px;
+    right: 20px;
     width: 75px;
     height: 75px;
     border-radius: 50%;
     cursor: pointer;
     display: relative;
+    aspect-ratio: 1/1;
 
     > img{
         width: 100%;

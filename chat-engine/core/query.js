@@ -34,7 +34,7 @@ module.exports = async function (q, k){
                         // resolve(result.item.metadata.text);
                         await createResponse(q, result, openai)
                         .then((response) => resolve(response))
-                        .catch((error) => reject(error));                        
+                        .catch((error) => reject(error));                     
                     });
         } catch (error) {
             reject(error);
