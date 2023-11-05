@@ -5,23 +5,46 @@ Hey! Thanks for visiting. I'm Blitzle, your CICT Buddy. I can send you updates a
 
 
 
-The application for the upcoming school year is still ongoing. You can check the TCU website or Facebook page for more information.
+The application for the upcoming school year is still ongoing. You can check the [TCU Facebook page](https://www.facebook.com/TCUOfficial2022) for more information.
 
 The application process for TCU is as follows:
-1. Visit the TCU website and fill out the online application form.
-2. Submit the required documents to the TCU Registrar.
+1. Visit the [TCU Facebook page](https://www.facebook.com/TCUOfficial2022)e and wait for admission date.
+2. Submit the required documents to the TCU Registrar within the announced date.
 3. Take the entrance exam.
 4. Wait for the admission results.
-5. Pay the tuition fee and enroll for classes.
+5. Once passed, you are now ready for enrollment, bring the necessary documents as announced on [TCU Facebook page](https://www.facebook.com/TCUOfficial2022).
 
 The requirements for enrollment at TCU vary depending on the applicant's status. However, some of the general requirements include:
-1. High school diploma or equivalent.
-2. Certificate of good moral character.
-3. PSA birth certificate.
-4. Two (2) 2x2 ID pictures with white background.
-5. For freshmen, Grade 11 rating card and Grade 12 first semester rating card duly signed by the high school principal.
-6. For ALS passers, ALS certificate from DepEd.
-7. For Balik-aral (college), leave of absence (LOA) and year level last attended.
+
+For Freshmen:
+- Grade 11 Rating card and Grade 12 first semester rating card duly signed by high school principal.
+- Certificate of Good Moral character.
+- PSA birth certificate.
+- One piece of 2x2 ID picture with a white background and a name tag.
+- Comelec Certification of Parents (for applicants below 18 years old).
+- Comelec Certification of Students (for applicants 18 years old and above).
+- Learner reference number (LRN).
+- Admission Requirements form (ARF).
+
+For ALS Passers (Eligible for College):
+
+- ALS certificate from DepEd.
+- ALS certificate of rating.
+- Certificate of Good Moral character.
+- PSA birth certificate.
+- Student COMELEC certification.
+- One piece of 2x2 ID picture with a white background and a name tag.
+- Admission requirements form (ARF).
+
+For Balik-Aral (College):
+
+- Leave of absence (LOA).
+- Year level last attended.
+- Certificate of Good Moral character.
+- PSA Birth certificate.
+- Student COMELEC Certification.
+- One piece of 2x2 ID picture with a white background and a name tag.
+- Admission requirement form (ARF).
 
 ---
 
@@ -46,7 +69,7 @@ TCU offers a variety of courses at the undergraduate and graduate levels. Some o
 
 ---
 
-Yes, there is an entrance exam for freshmen applicants. The exam is usually held in March or April of each year.
+Yes, there is an entrance exam. Registrar may give you the schedule for the date or wait for an announcement on the [TCU Facebook page](https://www.facebook.com/TCUOfficial2022)
 
 ---
 
@@ -73,9 +96,9 @@ The TCU Registrar is open from 8:00 am to 4:00 pm, Monday to Friday.
 ---
 
 
-You can get your grades from the TCU Registrar. You can either request for a hard copy of your grades or you can view them online.
+You can get your grades from the TCU Registrar. 
 
-You can get your TOR from the TCU Registrar. You can either request for a hard copy of your TOR or you can view it online.
+You can request for your Transcript of Records (TOR) on the registrar. They will give you a schedule on when you can claim it.
 
 ---
 
@@ -83,7 +106,7 @@ The tuition fee for Taguig City University is completely free.
 
 ---
 
-Yes, there are still slots available for the online admission application. You can apply for admission on the TCU website.
+Yes, there are still slots available for the online admission application or watch for an update on [TCU Facebook page](https://www.facebook.com/TCUOfficial2022)
 
 ---
 

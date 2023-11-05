@@ -17,9 +17,9 @@ async function vectorizeText(text){
         'model': 'text-embedding-ada-002',
         'input': text,
     });
-
-    return response.data.data[0].embedding;
+    return response.data[0].embedding;
 }
+
 
 module.exports = async function(){
     return new Promise(async (resolve, reject) => {

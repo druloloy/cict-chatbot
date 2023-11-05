@@ -5,6 +5,7 @@ if (process.env.NODE_ENV !== 'production') {
 const {query, initVectra} = require('../utils/vectra');
 const {getOpenAIApiInstance} = require('../utils/openai');
 const path = require('path');
+const { createResponse } = require('./prompt');
 
 const openaikey = process.env.OPENAI_API_KEY;
 const openai = getOpenAIApiInstance(openaikey);
@@ -25,9 +26,16 @@ module.exports = async function (q, k){
             const index = await initVectra(path.join(__dirname, '../store'));
             const vector = await vectorizeText(q);
 
-            await query(index, vector, k, (result) => {
-                resolve(result.item.metadata.text);
-            });
+            await query(
+                    index, 
+                    vector, 
+                    k, 
+                    async (result) => {
+                        // resolve(result.item.metadata.text);
+                        await createResponse(q, result, openai)
+                        .then((response) => resolve(response))
+                        .catch((error) => reject(error));                        
+                    });
         } catch (error) {
             reject(error);
         }
