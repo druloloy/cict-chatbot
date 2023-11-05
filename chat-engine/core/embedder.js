@@ -13,13 +13,13 @@ const vectrapath = path.join(__dirname, '../store');
 const openai = getOpenAIApiInstance(openaikey);
 
 async function vectorizeText(text){
-    const response = await openai.createEmbedding({
+    const response = await openai.embeddings.create({
         'model': 'text-embedding-ada-002',
         'input': text,
     });
-
-    return response.data.data[0].embedding;
+    return response.data[0].embedding;
 }
+
 
 module.exports = async function(){
     return new Promise(async (resolve, reject) => {

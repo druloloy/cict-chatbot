@@ -14,8 +14,10 @@ exports.chat = async (req, res, next) => {
             message: 'q is required'
         });
 
+        const k = 3;
+
         // process req
-        const result = await query(q, 1);
+        const result = await query(q, k);
 
         // generate suggestions
         const suggestions = generateSuggestions();
@@ -26,6 +28,7 @@ exports.chat = async (req, res, next) => {
             suggestions
         });
     } catch (error) {
+        console.log(error)
         res.status(500).json({
             message: "Sorry, I am not available right now. Please try again later.",
             error: error.message

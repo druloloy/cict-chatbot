@@ -22,10 +22,8 @@ async function addItem(index, vector, text){
 async function query(index, vector, k=3, callback){
     const results = await index.queryItems(vector, k);
     if (results.length > 0) {
-        for (const result of results) {
-            // console.log(`[${result.score}] ${result.item.metadata.text}`);
-            callback(result);
-        }
+        const responses = results.map(item => item.item.metadata.text);
+        callback(responses);
     } else {
         // console.log(`No results found.`);
         throw new Error('No results found.');
