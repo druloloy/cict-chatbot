@@ -26,6 +26,7 @@ exports.chat = async (req, res, next) => {
             suggestions
         });
     } catch (error) {
+        console.log(error)
         res.status(500).json({
             message: "Sorry, I am not available right now. Please try again later.",
             error: error.message

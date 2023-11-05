@@ -1,10 +1,7 @@
-const {OpenAIApi, Configuration} = require('openai');
+const {OpenAI} = require('openai');
 function getOpenAIApiInstance(apiKey){
-    const configuration = new Configuration({
-        apiKey,
-    });
-
-    return new OpenAIApi(configuration);
+    const openai = new OpenAI(apiKey);
+    return openai;
 }
 module.exports = {
     getOpenAIApiInstance

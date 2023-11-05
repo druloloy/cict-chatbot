@@ -17,7 +17,7 @@
     "cors": "^2.8.5",
     "express": "^4.17.2",
     "express-rate-limit": "^6.9.0",
-    "openai": "^3.3.0",
+    "openai": "^4.15.3",
     "vectra": "^0.1.2"
   },
   "devDependencies": {
