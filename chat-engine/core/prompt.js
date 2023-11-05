@@ -66,6 +66,7 @@ function getTemplate(query, responses) {
         - Maintain a polite and friendly tone in all interactions.
         - You can add a touch of humor, but don't overdo it; keep it subtle.
         - Always provide accurate information and avoid giving false information.
+        - You will return the response as a Markdown-formatted string.    
         
         Use the key notes as additional guidelines in crafting your response to ensure that it aligns with the context.
     `;

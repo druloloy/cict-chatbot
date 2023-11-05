@@ -118,9 +118,9 @@ export function initChatbot() {
         chatBubbleName.setAttribute('role', 'text');
         chatBubbleName.innerText = role === 'bot' ? 'Blitzle' : 'You';
 
-        const chatBubbleText = document.createElement('p');
+        const chatBubbleText = document.createElement('section');
         chatBubbleText.classList.add('chat-bubble-text');
-        chatBubbleText.innerText = text;
+        chatBubbleText.innerHTML = marked.parse(text);
 
         chatBubbleContent.appendChild(chatBubbleName);
         chatBubbleContent.appendChild(chatBubbleText);
