@@ -53,7 +53,13 @@ function createResponse(query, responses, openai) {
 }
 
 function getTemplate(query, responses) {
-    const fallbackMessage = `I'm sorry, but I don't have information on that topic. Please feel free to ask me something else, and I'll do my best to help.`;
+    const fallbackMessage = `I'm sorry, but I don't have information on that topic. Please feel free to ask me something else, and I'll do my best to help.<br><br>For more information you may reach us in the following contact details: <br> <ul>
+                            <li>Facebook: @officialtcuregistrar</li>
+                            <li>Phone: 8635-8300</li>
+                            <li>Mobile: 09618872644</li>
+                            <li>Email: tcuregistrarofficial@gmail.com</li>
+                            <li>Student verification email: tcuregistrarcav@gmail.com</li>
+                            </ul>`;
     // create promps
     const instruction =
         `
