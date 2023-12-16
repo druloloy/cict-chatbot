@@ -158,6 +158,13 @@ body {
                             font-size: 1rem;
                         } 
 
+                        > ul {
+                            > li a {
+                                font-weight: 500;
+                                color: var(--color-accent);
+                            }
+                        }
+
                     }
                 }
             }

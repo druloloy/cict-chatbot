@@ -53,7 +53,15 @@ function createResponse(query, responses, openai) {
 }
 
 function getTemplate(query, responses) {
-    const fallbackMessage = `I'm sorry, but I don't have information on that topic. Please feel free to ask me something else, and I'll do my best to help.`;
+    const fallbackMessage = `I'm sorry, but I don't have information on that topic. Please feel free to ask me something else, and I'll do my best to help.<br><br>
+                            For more information you may reach the TCU's Registrar Office in the following contact details: <br> 
+                            
+                            - Facebook: [@officialtcuregistrar](www.facebook.com/officialtcuregistrar/)
+                            - Phone: [8635-8300](tel:8635-8300)
+                            - Mobile: [09618872644](tel:09618872644)
+                            - Email: [tcuregistrarofficial@gmail.com](mailto:tcuregistrarofficial@gmail.com)
+                            - Student verification email: [tcuregistrarcav@gmail.com](mailto:tcuregistrarcav@gmail.com)
+                            `;
     // create promps
     const instruction =
         `
