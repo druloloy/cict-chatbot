@@ -138,7 +138,8 @@ body {
                         }
 
                         > a,
-                        > p > a {
+                        > p > a,
+                        > li > a{
                             font-weight: 500;
                             color: var(--color-accent);
                         }
