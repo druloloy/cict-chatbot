@@ -80,8 +80,7 @@ function getTemplate(query, responses) {
     `;
 
     const question = `
-    This is the question you need to answer. If the question is inapproppriate, personal, or doesn't relate to any of the 
-    context then send only the fallback message and ONLY that.
+    This is the question you need to answer. If the question is inapproppriate, personal, or doesn't relate to any of the context rovidfed then send only the fallback message and ONLY that.
     Question: ${query}
     `;
 
