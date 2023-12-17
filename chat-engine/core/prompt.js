@@ -90,7 +90,7 @@ function getTemplate(query, responses) {
     `;
 
     const fallback = `
-    If the answer is far from the context, you can answer it with the fallback message. You can be creative in telling the fallback message, but you must be polite and friendly. You can also be funny, but not too much. And most importantly, you shouldn't give false information.
+    If the answer is far from the context, you can answer it with ONLY the fallback message and most importantly, you shouldn't give false information.
     Fallback: ${fallbackMessage}
     `;
 
