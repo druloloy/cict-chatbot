@@ -80,7 +80,8 @@ function getTemplate(query, responses) {
     `;
 
     const question = `
-    This is the question you need to answer.
+    This is the question you need to answer. If the question is inapproppriate, personal, or doesn't relate to any of the 
+    context then send only the fallback message and ONLY that.
     Question: ${query}
     `;
 
@@ -90,7 +91,7 @@ function getTemplate(query, responses) {
     `;
 
     const fallback = `
-    If the answer is far from the context or the question is inapproppriate, personal, or doesn't relate to any of the context, you can answer it with ONLY the fallback message and most importantly, you shouldn't give false information.
+    If the answer is far from the context, you can answer it with ONLY the fallback message and most importantly, you shouldn't give false information.
     Fallback: ${fallbackMessage}
     `;
 
